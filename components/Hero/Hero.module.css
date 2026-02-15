@@ -1,0 +1,201 @@
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    padding: 80px 0;
+    min-height: 80vh;
+}
+
+.content {
+    flex: 1.2;
+    max-width: 650px;
+}
+
+.brandHero {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-bottom: 24px;
+}
+
+.appIconWrapper {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-container);
+    border-radius: 20px;
+    transition: transform 0.3s var(--m3-motion-standard);
+}
+
+.appIconWrapper:hover {
+    transform: scale(1.05) rotate(5deg);
+}
+
+.appIcon {
+    width: 56px;
+    height: 56px;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background-color: var(--secondary-container);
+    color: var(--on-secondary-container);
+    border-radius: var(--m3-shape-full);
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 32px;
+}
+
+.hero h1 {
+    margin-bottom: 24px;
+    color: var(--on-surface);
+}
+
+.hero p {
+    color: var(--on-surface-variant);
+    margin-bottom: 40px;
+    max-width: 500px;
+}
+
+.actions {
+    display: flex;
+    gap: 16px;
+}
+
+.visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.deviceFrame {
+    width: 280px;
+    height: 580px;
+    border-radius: 40px;
+    background: var(--surface-variant);
+    border: 12px solid var(--on-surface);
+    box-shadow: 0 50px 100px -20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    position: relative;
+}
+
+.mockScreen {
+    width: 100%;
+    height: 100%;
+    background: var(--surface);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.imageWrapper {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.screenshot {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s var(--m3-motion-standard);
+}
+
+.screenshot.active {
+    opacity: 1;
+}
+
+.screenOverlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 60%, rgba(0, 0, 0, 0.05));
+    pointer-events: none;
+}
+
+.statusIcons {
+    padding: 24px 24px 0;
+    height: 44px;
+}
+
+.appTitle {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 32px;
+}
+
+.scoreGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.scoreItem {
+    height: 80px;
+    background: var(--primary-container);
+    border-radius: 20px;
+    opacity: 0.5;
+}
+
+@media (max-width: 960px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 0;
+        gap: 40px;
+    }
+
+    .content {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        order: 1;
+    }
+
+    .brandHero {
+        align-items: center;
+        gap: 24px;
+    }
+
+    .hero p {
+        max-width: 100%;
+        font-size: 1.1rem;
+    }
+
+    .visual {
+        order: 2;
+        width: 100%;
+    }
+
+    .deviceFrame {
+        width: 240px;
+        height: 500px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 40px;
+        line-height: 48px;
+    }
+
+    .actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .actions button,
+    .actions a {
+        width: 100%;
+    }
+}

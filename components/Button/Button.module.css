@@ -1,0 +1,58 @@
+.button {
+    position: relative;
+    height: 40px;
+    padding: 0 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--m3-shape-full);
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.1px;
+    cursor: pointer;
+    border: none;
+    overflow: hidden;
+    transition: box-shadow var(--m3-motion-duration-short) var(--m3-motion-standard);
+    background: transparent;
+}
+
+.stateLayer {
+    position: absolute;
+    inset: 0;
+    background-color: currentColor;
+    opacity: 0;
+    transition: opacity var(--m3-motion-duration-short) var(--m3-motion-standard);
+}
+
+.button:hover .stateLayer {
+    opacity: 0.08;
+}
+
+.button:active .stateLayer {
+    opacity: 0.12;
+}
+
+.primary {
+    background-color: var(--primary);
+    color: var(--on-primary);
+}
+
+.secondary {
+    background-color: var(--secondary-container);
+    color: var(--on-secondary-container);
+}
+
+.outlined {
+    border: 1px solid var(--outline);
+    color: var(--primary);
+}
+
+.text {
+    color: var(--primary);
+}
+
+.label {
+    position: relative;
+    z-index: 1;
+}

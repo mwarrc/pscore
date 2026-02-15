@@ -1,0 +1,44 @@
+.header {
+    padding: 80px 0 40px;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 32px;
+    padding-bottom: 80px;
+}
+
+.screenshotCard {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.imageContainer {
+    width: 100%;
+    aspect-ratio: 9/19.5;
+    background-color: var(--surface-variant);
+    border-radius: var(--m3-shape-medium);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.info {
+    padding-top: 12px;
+}
+
+.empty {
+    text-align: center;
+    padding: 80px 0;
+    color: var(--on-surface-variant);
+}

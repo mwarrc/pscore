@@ -1,0 +1,125 @@
+.navbar {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--surface);
+    border-bottom: 1px solid var(--surface-variant);
+}
+
+.navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--on-surface);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.logoIconWrapper {
+    width: 36px;
+    height: 36px;
+    background-color: var(--primary);
+    color: #ffffff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s var(--m3-motion-standard);
+}
+
+.logoIconWrapper svg {
+    width: 24px;
+    height: 24px;
+}
+
+.logo:hover .logoIconWrapper {
+    transform: scale(1.05);
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.link {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--on-surface-variant);
+    transition: color 0.2s;
+}
+
+.link:hover {
+    color: var(--primary);
+}
+
+.downloadBtn {
+    background-color: var(--primary);
+    color: var(--on-primary);
+    border: none;
+    padding: 10px 24px;
+    border-radius: var(--m3-shape-full);
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.menuToggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--on-surface);
+    cursor: pointer;
+    padding: 8px;
+}
+
+@media (max-width: 768px) {
+    .logo span {
+        display: none;
+    }
+
+    .menuToggle {
+        display: block;
+    }
+
+    .links {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background: var(--surface);
+        flex-direction: column;
+        padding: 24px;
+        gap: 16px;
+        border-bottom: 1px solid var(--surface-variant);
+        box-shadow: var(--m3-elevation-2);
+    }
+
+    .links.mobileOpen {
+        display: flex;
+    }
+
+    .downloadBtn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .links {
+        display: none;
+    }
+}

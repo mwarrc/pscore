@@ -1,0 +1,26 @@
+.card {
+    padding: 24px;
+    border-radius: var(--m3-shape-large);
+    transition: all var(--m3-motion-duration-medium) var(--m3-motion-standard);
+}
+
+.filled {
+    background-color: var(--surface-variant);
+    color: var(--on-surface-variant);
+}
+
+.elevated {
+    background-color: var(--surface);
+    color: var(--on-surface);
+    box-shadow: var(--m3-elevation-1);
+}
+
+.elevated:hover {
+    box-shadow: var(--m3-elevation-2);
+}
+
+.outlined {
+    background-color: var(--surface);
+    color: var(--on-surface);
+    border: 1px solid var(--outline);
+}
