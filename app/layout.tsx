@@ -13,6 +13,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://mwarrc.github.io/pscore'),
   title: "PocketScore | Smart Scorekeeping",
   description: "Modern, expressive, and user-friendly Material 3 scorekeeping app for Android. Track scores, view insights, and celebrate victories.",
   keywords: ["scorekeeping", "android", "material 3", "pocketscore", "gaming", "board games"],
